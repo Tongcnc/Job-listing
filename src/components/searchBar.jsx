@@ -1,6 +1,6 @@
 function SearchBar() {
   return (
-    <div className="fixed top-32 left-[50%] translate-x-[-50%]">
+    <div className="absolute top-[130px] left-[50%] translate-x-[-50%]">
       <div className="bg-white rounded-md drop-shadow-3xl w-[1000px] h-16 px-10 flex justify-between items-center">
         <div className="text-headline2 flex">
           <span className="bg-Light-color text-Primary-color px-2 py-1 rounded-l">

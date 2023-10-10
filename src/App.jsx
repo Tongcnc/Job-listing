@@ -6,7 +6,7 @@ import desktop from "./assets/bg-header-desktop.svg";
 function App() {
   return (
     <>
-      <div className="bg-Light-Grayish-bg w-screen h-screen">
+      <div className="bg-Light-Grayish-bg h-100vh relative">
         {/* <div data-theme="mytheme"> */}
         <img
           src={desktop}
