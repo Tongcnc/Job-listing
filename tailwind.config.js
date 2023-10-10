@@ -6,9 +6,12 @@ export default {
       transparent: "transparent",
       current: "currentColor",
       "Light-Grayish-bg": "hsl(180, 52%, 96%)",
-      "Light-Grayish-filter": "hsl(180, 31%, 95%)",
-      "Dark-Grayish": "hsl(180, 8%, 52%)",
-      "Very-Dark-Grayish-": "hsl(180, 14%, 20%)",
+      "Gray-color": "hsl(180, 10%, 65%)",
+
+      "Light-color": "hsl(180,39%,95%)",
+      "Primary-color": "hsl(179,29%,51%)",
+      "Dark-color": "hsl(179,29%,10%)",
+      white: "#fff",
     },
     fontSize: {
       body2: [
@@ -16,7 +19,6 @@ export default {
         {
           lineHeight: "21px",
           fontWeight: "500",
-          fontStyle: "Uppercase",
         },
       ],
       body1: [
@@ -27,14 +29,14 @@ export default {
         },
       ],
       headline2: [
-        "16px",
+        "14px",
         {
           lineHeight: "24px",
           fontWeight: "700",
         },
       ],
       headline1: [
-        "20px",
+        "18px",
         {
           lineHeight: "30px",
           fontWeight: "700",
@@ -43,6 +45,9 @@ export default {
     },
     fontFamily: {
       "League Spartan": ["LeagueSpartan"],
+    },
+    dropShadow: {
+      "3xl": "10px 10px 10px rgba(93,165,164,0.4)",
     },
     extend: {},
   },
