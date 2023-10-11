@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function SearchBar({ handleClickClear, handleClickDelete, selectTags }) {
   return (
     <div className="absolute top-[130px] left-[50%] translate-x-[-50%]">
@@ -41,5 +43,11 @@ function SearchBar({ handleClickClear, handleClickDelete, selectTags }) {
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  handleClickClear: PropTypes.func.isRequired,
+  handleClickDelete: PropTypes.func.isRequired,
+  selectTags: PropTypes.array.isRequired,
+};
 
 export default SearchBar;

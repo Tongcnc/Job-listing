@@ -37,11 +37,7 @@ function App() {
           selectTags={selectTags}
         />
 
-        <CardJob
-          selectTags={selectTags}
-          handleAddTag={handleAddTag}
-          // setSelectTags={setSelectTags}
-        />
+        <CardJob handleAddTag={handleAddTag} />
       </div>
     </>
   );

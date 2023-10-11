@@ -1,6 +1,7 @@
 import data from "../data/data.json";
+import PropTypes from "prop-types";
 
-function CardJob({ selectTags, handleAddTag }) {
+function CardJob({ handleAddTag }) {
   return (
     <div className="mt-10 flex flex-col items-center">
       {data.map((item, index) => {
@@ -64,5 +65,9 @@ function CardJob({ selectTags, handleAddTag }) {
     </div>
   );
 }
+
+CardJob.propTypes = {
+  handleAddTag: PropTypes.func.isRequired,
+};
 
 export default CardJob;
