@@ -1,10 +1,12 @@
 import data from "../data/data.json";
 import PropTypes from "prop-types";
 
-function CardJob({ handleAddTag }) {
+function CardJob({ handleAddTag, filteredItems }) {
+  const itemsToDisplay = filteredItems.length > 0 ? filteredItems : data;
+
   return (
-    <div className="mt-10 flex flex-col items-center">
-      {data.map((item, index) => {
+    <div className="mt-10 pb-20 flex flex-col items-center bg-Light-Grayish-bg">
+      {itemsToDisplay.map((item, index) => {
         const roles = item.role;
         const languages = item.languages;
         const tools = item.tools;
@@ -68,6 +70,7 @@ function CardJob({ handleAddTag }) {
 
 CardJob.propTypes = {
   handleAddTag: PropTypes.func.isRequired,
+  filteredItems: PropTypes.array.isRequired,
 };
 
 export default CardJob;
