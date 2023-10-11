@@ -49,7 +49,7 @@ function App() {
         <img
           src={desktop}
           alt="header-desktop"
-          className="w-screen bg-Primary-color"
+          className="w-screen bg-Primary-color mobile:h-[160px]"
         />
 
         <SearchBar

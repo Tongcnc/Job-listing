@@ -36,7 +36,7 @@ export default {
         },
       ],
       headline1: [
-        "18px",
+        "16px",
         {
           lineHeight: "30px",
           fontWeight: "700",
@@ -49,7 +49,11 @@ export default {
     dropShadow: {
       "3xl": "10px 10px 10px rgba(93,165,164,0.4)",
     },
-    extend: {},
+    extend: {
+      screens: {
+        mobile: "375px",
+      },
+    },
   },
   plugins: [],
 };
