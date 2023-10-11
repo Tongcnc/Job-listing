@@ -1,12 +1,17 @@
 import data from "../data/data.json";
 
-function CardJob() {
+function CardJob({ selectTags, handleAddTag }) {
   return (
     <div className="mt-10 flex flex-col items-center">
-      {data.map((item) => {
+      {data.map((item, index) => {
+        const roles = item.role;
+        const languages = item.languages;
+        const tools = item.tools;
+        const combineTags = [roles, ...languages, ...tools];
+
         return (
           <div
-            key={item.id}
+            key={index}
             className="bg-white rounded-md drop-shadow-3xl w-[1000px] p-10 my-6 flex justify-between items-center"
           >
             <div className="flex gap-4">
@@ -41,33 +46,17 @@ function CardJob() {
                 </div>
               </div>
             </div>
-
+            {/* Combine tags from different categories into a single array */}
             <div className="flex gap-4">
-              <div className="text-headline2 inline-block px-2 py-1 cursor-pointer bg-Light-color text-Primary-color rounded hover:bg-Primary-color hover:text-white">
-                {item.role}
-              </div>
-
-              {item.languages.map((lang) => {
-                return (
-                  <div
-                    key={lang.id}
-                    className="text-headline2 inline-block px-2 py-1 cursor-pointer bg-Light-color text-Primary-color rounded hover:bg-Primary-color hover:text-white"
-                  >
-                    {lang}
-                  </div>
-                );
-              })}
-
-              {item.tools.map((lang) => {
-                return (
-                  <div
-                    key={lang.id}
-                    className="text-headline2 inline-block px-2 py-1 cursor-pointer bg-Light-color text-Primary-color rounded hover:bg-Primary-color hover:text-white"
-                  >
-                    {lang}
-                  </div>
-                );
-              })}
+              {combineTags.map((tag, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleAddTag(tag)}
+                  className="text-headline2 inline-block px-2 py-1 cursor-pointer bg-Light-color text-Primary-color rounded hover:bg-Primary-color hover:text-white"
+                >
+                  {tag}
+                </div>
+              ))}
             </div>
           </div>
         );
