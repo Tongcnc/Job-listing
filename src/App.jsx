@@ -32,9 +32,22 @@ function App() {
     }
   };
 
-  const handleClickDelete = () => {
-    const updatedTags = selectTags.slice(0, -1);
-    setSelectedTags(updatedTags);
+  const handleClickDelete = (tag) => {
+    if (!selectTags.includes(tag)) {
+      const updatedTags = selectTags.slice(0, -1);
+      setSelectedTags(updatedTags);
+
+      const matchingItems = data.filter((item) => {
+        return updatedTags.every((selectedTag) => {
+          return (
+            item.role === selectedTag ||
+            item.languages.includes(selectedTag) ||
+            item.tools.includes(selectedTag)
+          );
+        });
+      });
+      setFilteredItems(matchingItems);
+    }
   };
 
   useEffect(() => {
