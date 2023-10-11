@@ -1,4 +1,4 @@
-import data from "../data/data.json";
+import data from "../data/data.js";
 import PropTypes from "prop-types";
 
 function CardJob({ handleAddTag, filteredItems }) {

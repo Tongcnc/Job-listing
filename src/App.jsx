@@ -3,7 +3,7 @@ import desktop from "./assets/bg-header-desktop.svg";
 import { useEffect, useState } from "react";
 import CardJob from "./components/cardJobs";
 import SearchBar from "./components/searchBar";
-import data from "./data/data.json";
+import data from "./data/data.js";
 
 function App() {
   const [selectTags, setSelectedTags] = useState([]);
